@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Student Result Dashboard</title>
+    <style>
+        *
+        {
+            padding: 0px;
+            margin: 0;
+        }
+        body
+        {
+            background: url("./alliance\ photo.avif");
+            background-size: cover;
+        }
+        h1
+        {
+            text-align: center;
+            text-decoration: underline;
+            background-color: rgb(209, 217, 228);
+            height: 90px;
+            padding-top: 40px;
+        }
+        h2
+        {
+            text-align: center;
+        }
+        div
+        {
+            margin-left: 440px;
+            border: 1px solid black;
+            width: 390px;
+            padding: 30px;
+            font-size: 15px;
+            margin-top: 45px;
+            background-color: rgb(255, 255, 255);
+        }
+        button
+        {
+            margin-left: 100px;
+        }
+        #para
+        {
+            margin-top: 40px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <!-- html  -->
+        <h1>Interactive Student Result Dashboard</h1>
+        <div>
+        <label>Student Name : </label>
+        <input type="text" name="n1" id="i1"><br><br>
+        <label>Student Reg : </label>
+        <input type="text" name="n2" id="i2"><br><br>
+        <label>HTML Marks : </label>
+        <input type="number" name="n3" id="i3"><br><br>
+        <label>CSS Marks : </label>
+        <input type="number" name="n4" id="i4"><br><br>
+        <label>JS Marks : </label>
+        <input type="number" name="n5" id="i5"><br><br>
+        <button onclick="Check()" type="button">Results</button>
+        <button type="reset">Reset</button>
+        <p id="para"></p>
+        </div>
+    </form>
+    <!-- Java Script  -->
+     <script>
+        function Check() {
+            let n1 = document.getElementById('i1').value;
+            let n2 = document.getElementById('i2').value;
+            let n3 = Number(document.getElementById('i3').value);
+            let n4 = Number(document.getElementById('i4').value);
+            let n5 = Number(document.getElementById('i5').value);
+            let total = n3+n4+n5;
+            let Avg = total/3;
+            let percentage = (total/300)*100;
+            let grade;
+            if (Avg >= 80)
+            {
+                grade = "A+";
+            }
+            else if (Avg >= 60)
+            {
+                grade = "B";
+            }
+            else if (Avg >= 40)
+            {
+                grade = "C";
+            }
+            else if (Avg<40)
+            {
+                grade = "D";
+            }
+            else
+            {
+                grade = "Absent";
+            }
+            let status;
+            if (Avg >=40)
+            {
+                status = "Pass";
+            }
+            else
+            {
+                status = "Fail";
+            }
+            document.getElementById('para').innerHTML=
+            "<h2>STUDENT DETATILS</h2>"+"<br>"
+            +"Student Name : " + n1 + "<br>" 
+            +"Student Reg : " + n2 + "<br>" 
+            +"Html Marks : " + n3 + "<br>"
+            +"CSS Marks : " + n4 + "<br>"
+            +"JS Marks : " + n5 + "<br>"
+            +"Total Marks : " + total + "<br>" 
+            + "Average Marks : " + Avg + "<br>" 
+            + "Percentage : " + percentage + "%" + "<br>"
+            + "Grade : " + grade + "<br>" 
+            + "Result : " + status;
+        };
+     </script>
+</body>
+</html>
