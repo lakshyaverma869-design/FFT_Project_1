@@ -1,0 +1,596 @@
+<html>
+
+<head>
+    <title>semantic dep website</title>
+    <style>
+        h3 {
+            margin-top: 40px;
+            padding: 10px;
+        }
+
+        #home {
+            margin-bottom: 500px;
+        }
+
+        #about {
+            margin-bottom: 500px;
+        }
+
+        #faculty {
+            margin-bottom: 600px;
+        }
+
+        #courses {
+            margin-bottom: 600px;
+        }
+
+        #time {
+            margin-bottom: 600px;
+        }
+
+        #achievement {
+            margin-bottom: 600px;
+        }
+
+        #events {
+            margin-bottom: 600px;
+        }
+
+        #contact {
+            margin-bottom: 600px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            padding-top: 15px;
+            color: white;
+            letter-spacing: 2px;
+            font-family: monospace;
+            text-shadow: 4px 6px 12px rgb(0, 0, 0);
+        }
+
+        header {
+            background: linear-gradient(135deg, rgb(58, 28, 113), rgb(95, 75, 139));
+            color: white;
+            padding-bottom: 15px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+            color: rgb(40, 40, 40);
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        li {
+            margin-top: 20px;
+            list-style: none;
+        }
+
+        nav a {
+            color: rgb(192, 227, 243);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: 3s;
+        }
+
+        nav a:hover {
+            color: white;
+            text-decoration: none;
+            background-color: rgb(124, 193, 171);
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 20px;
+            font-size: medium;
+            color: rgb(236, 185, 185);
+            font-family: cursive;
+            text-shadow: 2px 4px 8px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h4 {
+            text-align: center;
+            margin-top: 15px;
+            color: rgb(163, 241, 241);
+        }
+
+        article:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        section {
+            padding: 30px;
+            margin: 25px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 15px;
+        }
+
+        .highlights-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 25px;
+        }
+
+        .card {
+            width: 150px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            margin-top: 10px;
+            border-radius: 20px;
+            transition: transform 0.3s;
+        }
+
+        .card img:hover {
+            transform: scale(1.25);
+        }
+
+        .card h4 {
+            margin-top: 10px;
+            color: black;
+            font-family: serif;
+        }
+
+        .card p {
+            margin-top: 5px;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: 0.3s;
+        }
+
+        img {
+            height: 250px;
+            width: 250px;
+            margin-top: 10px;
+            border-radius: 20px;
+            box-shadow: 2px 4px 6px;
+            object-fit: cover;
+            transition: 3s;
+        }
+
+        article p {
+            margin-top: 10px;
+        }
+
+        aside {
+            background-color: rgb(255, 248, 210);
+            padding: 20px;
+            margin: 25px;
+            border-left: 6px solid rgb(124, 193, 171);
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: rgb(58, 28, 113);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid rgb(220, 220, 220);
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgb(58, 28, 113);
+            color: white;
+        }
+
+        tr:hover {
+            background-color: rgb(240, 240, 250);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        form input,
+        form textarea {
+            margin-top: 10px;
+            padding: 8px;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            outline: none;
+            border: 2px solid rgb(124, 193, 171);
+            box-shadow: 0 0 8px rgba(124, 193, 171, 0.4);
+        }
+
+        form button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: rgb(124, 193, 171);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 3s;
+        }
+
+        form button:hover {
+            background-color: rgb(58, 28, 113);
+            color: white;
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .highlights-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            article {
+                width: 80%;
+            }
+
+            form {
+                width: 80%;
+            }
+
+            table {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Semantic Dep Web </h1>
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about Department</a></li>
+                <li><a href="#faculty">faculty</a></li>
+                <li><a href="#courses">courses</a></li>
+                <li><a href="#timetable">timetable</a></li>
+                <li><a href="#achievement">achievement</a></li>
+                <li><a href="#events">events</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main container for page sections -->
+    <main>
+        <!-- home section -->
+        <section id="home">
+            <p>The Master of Computer Applications (BCA) program with specializations in Data Science, General,
+                Generative AI, and Game Designing is designed to deliver advanced computing knowledge along with
+                domain-specific expertise aligned to emerging industry trends.
+                The program follows a comprehensive, application-driven approach, enabling students to build strong
+                conceptual understanding and practical proficiency in core areas such as programming (Java, Python),
+                data structures, algorithms, database management systems, cloud computing, and software engineering.
+                From the early stages, students progressively develop expertise in their chosen domains:
+                Data Science focuses on data analysis, statistical modeling, visualization, and big data technologies.
+                Generative AI emphasizes deep learning, large language models, natural language processing, and
+                intelligent systems.
+                Game Designing covers game design, graphics and animation, UIUX, and immersive technologies like VRAR.
+                The General track offers flexibility to explore multiple computing domains.</p>
+            <marquee>
+                <h2>HELLO BCA GRADUTES,WELCOME</h2>
+            </marquee>
+            <h3>Department Introduction</h3>
+            <p>This introduction is about the BCA Department</p>
+
+
+            <h3>Highlights</h3>
+
+            <div class="highlights-container">
+                <article>
+                    <img src="./brianpenny-ai-generated-8540913.jpg" alt="Data Science">
+                    <p>data Science</p>
+                </article>
+
+                <article>
+                    <img src="./geralt-monitor-1307227.jpg" alt="AI/ML">
+                    <p>AI/ML</p>
+                </article>
+
+                <article>
+                    <img src="./riki32-scam-7503835.jpg" alt="Cybersecurity">
+                    <p>cybersecurity</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- about department section -->
+        <section id="about">
+            <h3>About Department</h3>
+
+            <h4>Vision</h4>
+            <p>To emerge as a premier center of computer applications education and research, developing ethical,
+                innovative, and globally competent technology leaders.</p>
+
+            <h4>Mission</h4>
+            <p>To provide high-quality education through modern curricula and state-of-the-art laboratories.<br>
+                To foster research, problem-solving abilities, and industry collaborations among students.<br>
+                To instill professional ethics, team spirit, and lifelong learning for societal advancement.</p>
+
+            <h4>Objectives</h4>
+            <p>1. Equip students with core software development skills and emerging industry frameworks.<br>
+                2. Bridge academia and industry through guest lectures, hackathons, and industrial internships.<br>
+                3. Encourage interdisciplinary research projects and higher education pursuits.</p>
+        </section>
+
+        <!-- faculty section -->
+        <section id="faculty">
+            <h3>Faculty Details</h3>
+            <table>
+                <tr>
+                    <th>Faculty Name</th>
+                    <th>Designation</th>
+                    <th>Subjects Handled</th>
+                </tr>
+                <tr>
+                    <td>Prog. Kushal Huddhar</td>
+                    <td>Professor </td>
+                    <td>Basic to Advanced Python</td>
+                </tr>
+                <tr>
+                    <td>Prof. Oleti Durga Bravish</td>
+                    <td>Professor</td>
+                    <td>Advanced Datascience Techniques</td>
+                </tr>
+                <tr>
+                    <td>Prof. Abhishek A</td>
+                    <td>Professor</td>
+                    <td>Advanced UI and UX Design for Developers</td>
+                </tr>
+                <tr>
+                    <td>Prof. Dharshinee Nagarajan</td>
+                    <td>Professor</td>
+                    <td>Communication & Life Skills</td>
+                </tr>
+                <tr>
+                    <td>Prof. Pramisha Gewali</td>
+                    <td>Professor</td>
+                    <td>Discrete Structures</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- courses section -->
+        <section id="courses">
+            <h3>Courses & BCA Subjects</h3>
+
+            <h4>Semester-Wise Subjects (BCA Program)</h4>
+            <table>
+                <tr>
+                    <th>Semester</th>
+                    <th>Core Theory Subjects</th>
+                    <th>Practical Labs</th>
+                </tr>
+                <tr>
+                    <td>Semester I</td>
+                    <td>Front-end Framework, Advanced data Science, Problem Solving aptitude, Discrete Structures,
+                        Python, Communication Skills</td>
+                    <td>Front-end Framework, Python, Advanced UI/UX</td>
+                </tr>
+                <tr>
+                    <td>Semester II</td>
+                    <td>Data Structures in C++, DBMS, Discrete Mathematics, Operating Systems</td>
+                    <td>Data Structures Lab, SQL & Database Lab</td>
+                </tr>
+                <tr>
+                    <td>Semester III</td>
+                    <td>Java Programming, Computer Networks, Software Engineering, Web Tech</td>
+                    <td>Java Lab, Web Technologies Lab</td>
+                </tr>
+                <tr>
+                    <td>Semester IV</td>
+                    <td>Python Programming, Machine Learning, Cloud Computing, Major Project</td>
+                    <td>Python ML Lab, Project Implementation Lab</td>
+                </tr>
+            </table>
+        </section>
+
+
+        <!-- timetable section -->
+        <section id="timetable">
+            <h3>Timetable</h3>
+
+            <h4>Class Timetable</h4>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>9:00 AM - 11:00 AM</th>
+                    <th>11:15 AM - 1:15 PM</th>
+                    <th>2:00 PM - 4:00 PM</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Data Structures</td>
+                    <td>Python Theory</td>
+                    <td>Machine Learning</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Database Management</td>
+                    <td>Cloud Computing</td>
+                    <td>Cybersecurity Principles</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>Generative AI Architecture</td>
+                    <td>DBMS Theory</td>
+                    <td>Game Engines & VR</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Software Engineering</td>
+                    <td>Computer Networks</td>
+                    <td>Ethics in Computing</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Algorithms & Logic</td>
+                    <td>Deep Learning Basics</td>
+                    <td>Project Review Session</td>
+                </tr>
+            </table>
+
+            <h4>Lab Schedule</h4>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>Lab Slot (2:00 PM - 5:00 PM)</th>
+                    <th>Lab Location</th>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Data Science & Machine Learning Lab</td>
+                    <td>Computer Lab 1</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Python & Web Development Lab</td>
+                    <td>Computer Lab 3</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>Game Design & VR Graphics Lab</td>
+                    <td>Multimedia Lab 2</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- achievements section -->
+        <section id="achievement">
+            <h3>Achievements</h3>
+
+            <h4>Student Achievements</h4>
+            <p>• 1st prize at National Level Hackathon 2025 for building an AI-Powered Smart Traffic Management
+                System.<br>
+                • 100% placement rate for BCA batch across multinational IT software enterprises.<br>
+                • Outstanding Performance Award at International Collegiate Programming Contest (ICPC).</p>
+
+            <h4>Faculty Achievements</h4>
+            <p>• Dr. A. Sharma published 5 research papers in IEEE international journals.<br>
+                • Prof. R. Verma awarded Best Educator in Technical Education 2025.<br>
+                • Dr. K. Patel authored the textbook "Modern Cloud Computing & Security Frameworks."</p>
+
+            <h4>Events Completed</h4>
+            <p>• Successfully organized 50+ technical workshops, inter-college seminars, and national code sprints.</p>
+        </section>
+
+        <!-- events section -->
+        <section id="events">
+            <h3>Events</h3>
+
+            <h4>Workshops</h4>
+            <p>• Hands-on Workshop on Generative AI, Prompt Engineering, & Large Language Models (LLMs).<br>
+                • Hands-on Cyber Forensics and Penetration Testing Masterclass.</p>
+
+            <h4>Seminars</h4>
+            <p>• International Seminar on Cyber Security & Blockchain Infrastructure.<br>
+                • Tech Talk on Quantum Computing Trends and Future Careers.</p>
+
+            <h4>Hackathons</h4>
+            <p>• 24-Hour Non-stop Code-A-Thon: Building Next-Gen Web Solutions.<br>
+                • GameJam 2026: 48-Hour Game Development Sprint.</p>
+        </section>
+
+        <!-- sidebar notices -->
+        <aside>
+            <h3>Announcements</h3>
+            <p>Mid-semester examinations begin next Monday. Check notice boards for seating arrangements.</p>
+        </aside>
+
+        <!-- contact section -->
+        <section id="contact">
+            <h3>Contact Us</h3>
+            <p><b>Department Address:</b> Department of Computer Applications, Main Campus, Tech Block, City - 560001
+            </p>
+            <p><b>Email:</b> contact@department.edu | <b>Phone:</b> +1 800-555-0199</p>
+
+            <h4>Contact Form</h4>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Subject" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <!-- footer tag -->
+    <footer>
+        <p> Department of Computer Applications. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
