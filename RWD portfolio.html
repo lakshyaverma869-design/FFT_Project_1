@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshya Verma Portfolio</title>
+        <style>
+            body
+            {
+                background-color: rgb(227, 228, 224);
+            }
+            #header
+            {
+                background-color: rgb(172, 245, 138);
+            }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1
+            {
+                text-align: center; 
+                padding-top:  5px ;
+                font-family: sans-serif;
+            }
+            .head
+            {
+                text-align: center;
+            }
+            
+            #grid
+            {
+                display: grid;
+                grid-template-columns: 300px 300px 300px;
+                gap: 150px;
+                padding: 20px;
+                justify-content: center;
+                animation: slide 1s;
+            }
+            .box
+            {
+                border-radius: 10px;
+                padding: 20px;
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            
+            .box:hover
+            {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            }
+            ul 
+            {
+                display: flex;   
+                justify-content: center;
+                gap: 60px;
+                list-style-type: none;
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            .home
+            {
+                margin-top: 10px;
+            }
+            .about
+            {
+                margin-top: 10px;
+            }
+            .qual
+            {
+                margin-top: 10px;
+            }
+            .skill
+            {
+                margin-top: 10px;
+            }
+            .project
+            {
+                margin-top: 10px;
+            }
+            @keyframes slide
+            {
+                from
+                {
+                    transform: translateY(20px);
+                }
+                to
+                {
+                    transform: translateY(0);
+                }
+            }
+
+            @media (max-width: 700px)
+            {
+                #grid
+                {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+</head>
+<body>
+        <div id="header">
+            <h1>Lakshya Portfolio</h1>
+            <ul>
+                <li><a href="#home-link">Home</a></li>
+                <li><a href="#about-link">About</a></li>
+                <li><a href="#Qual-link">Qualifications</a></li>
+                <li><a href="#Skill-link">Skills</a></li>
+                <li><a href="#Project-link">Projects</a></li>
+            </ul>
+        </div>
+        <div id="grid">
+        <div class="box home" id="home-link">
+            <h1>
+               <u> Hello, i am Lakshya Verma </u>
+            </h1>
+            <p>I am a student interested in Artificial Intelligence and Machine Learning. I enjoy learning programming, working on projects and exploring new technologies. My goal is to build strong technical skills and pursue a career in AI and Machine Learning, where I can develop smart and useful solutions.</p>
+        </div>
+        
+        <div class="box about" id="about-link">
+            <h1><u>About</u></h1>
+            <p>I am Lakshya Verma, a student passionate about technology, programming and learning new skills. I am interested in Artificial Intelligence and Machine Learning and enjoy exploring new technologies and developing practical projects. I am currently improving my knowledge of programming, AI/ML and web development. I believe in continuous learning and want to use my technical skills to build useful and creative solutions.</p>
+        </div>
+        <div class="box qual" id="Qual-link">
+            <h1><u>Qualifications</u></h1>
+            <p>I am currently pursuing my studies in Computer Applications with a strong interest in Artificial Intelligence and Machine Learning. During my studies, I have been learning programming and web technologies while working on different academic and personal projects. I am continuously improving my problem-solving skills and building a strong foundation in Python, AI/ML, databases and web development. I enjoy exploring new technologies and want to use my skills to develop useful and innovative solutions.</p>
+        </div>  
+        <div class="box skill" id="Skill-link">
+            <h1><u>Skills :-</u></h1> 
+            <p>
+                <li>Python</li>
+                <li>Java</li>
+                <li>HTML</li>
+                <li>C</li>
+                <li>C++</li>
+            </p>
+        </div>
+        <div class="box project" id="Project-link">
+            <h1><u>Projects :-</u></h1>
+            <p>I have worked on different projects to improve my programming and technical skills. My projects include developing a personal portfolio website, designing web pages using HTML and CSS, and creating Python programs to practice problem-solving and programming concepts. I have also explored project ideas related to Artificial Intelligence and Machine Learning. These projects have helped me understand how programming concepts can be used to create practical and useful applications.</p>
+        </div>
+        </div>
+        <hr>
+    </body>
+</html>
